@@ -1,0 +1,341 @@
+body{
+    font-family: 'Spartan', sans-serif;
+}
+.gray-bg{
+    background-color: #e6e6e7;
+    height: 60px;
+}
+.navbar-brand img{
+    width: 80px;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.navbar-nav li{
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+.navbar-nav li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+}
+.navbar-nav li ul{
+    position: absolute;
+    width: 200px;
+    background-color: #fff;
+    padding: 15px;
+    left: 0;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+.navbar-nav li ul li{
+    background-color: #036eff;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 20px 5px;
+    cursor: pointer;
+}
+.navbar-nav li a{
+    color: #111;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 60px;
+    position: relative;
+    transition: .3s;
+}
+.active{
+    color: #7672fc !important;
+    border-bottom: 2px solid #7672fc;
+    padding-bottom: 19px !important;
+}
+.navbar-nav li a::after{
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #7672fc;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-nav li a:hover{
+    color: #7672fc;
+}
+.navbar-nav li:first-child a:hover::after{
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-white{
+    background-color: #fff;
+    border: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #036eff !important;
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+}
+.btn-white::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    background-color: #7672fc;
+    border: #7672fc;
+    z-index: -1;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-white:hover{
+    color: #fff !important;
+}
+.btn-white:hover::before{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.banner{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #ecf6ff;
+    overflow: hidden;
+}
+.banner img{
+    border-radius: 50%;
+    height: 106vh;
+    width: 114vh;
+    transform: translateX(130px) translateY(-80px);
+}
+.banner-content h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+.banner-content p{
+    font-size: 16px;
+    font: 400;
+    color: #606060;
+    margin: 30px 0;
+}
+.banner-content{
+    padding: 200px 0;
+}
+.bbtn{
+    font-size: 10px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+.bbtn:hover{
+    background-color: #fff !important;
+    color: #0d6efd;
+}
+.service{
+    position: relative;
+    z-index: 1;
+}
+.service::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    width: 250px;
+    margin-left: 30px;
+    background: url("https://i.ibb.co/bFsphQG/service-patern.png") center no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.service-content{
+    width: 70%;
+}
+.service-content span{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    color: #7672fc;
+}
+.service-content h2{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 20px 0;
+    text-transform: capitalize;
+    position: relative;
+}
+.service-content h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 50px;
+    background-color: #7672fc;
+}
+.service-content p{
+    font-size: 16px;
+    font: 400;
+    color: #606060;
+    margin: 30px 0;
+    max-width: 80%;
+}
+.s-item{
+    background-color: #f9fcff;
+    border-radius: 10px;
+    padding: 15px;
+    transition: .3s;
+}
+.s-item h6{
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+.s-item p{
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+    font-weight: 500;
+}
+.s-item span{
+    background-color: #5252f0;
+    height: 60px;
+    width: 60px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
+}
+.s-item span::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    background-color: #5252f0;
+    z-index: -1;
+}
+.s-item span i{
+    color: #fff;
+    font-size: 25px;
+    line-height: 60px;
+}
+.s-item span::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #9d8fec;
+    bottom: -10px;
+    left: 0;
+    transition: .5s;
+}
+.s-item:hover{
+    background-color: #036eff;
+    transform: scale(1.1);
+}
+.s-item:hover h6{
+    color: #fff;
+}
+.s-item:hover p{
+    color: #fff !important;
+}
+.s-item:hover span{
+    background-color: #fff;
+}
+.s-item:hover span i{
+   color: #7672fc;
+}
+.s-item:hover span::after{
+   background-color: #fff;
+}
+.s-item:hover span::before{
+   background-color: #fff;
+   width: 50px;
+}
+.animation{
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("https://i.ibb.co/w774QtN/video-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+.animation-content{
+    width: 50%;
+    margin: auto;
+    padding: 40px 0 130px 0;
+}
+.animation-content h5{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.animation-content h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+.animation-content p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #fff;
+}
+.animation-content span{
+    height: 80px;
+    width: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+}
+.animation-content span i{
+    font-size: 20px;
+    color: #5252f0;
+}
+.animation-content span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 3px double #fff;
+    top: 0;
+    left: 0;
+    animation: animate 1.5s ease-in-out infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
